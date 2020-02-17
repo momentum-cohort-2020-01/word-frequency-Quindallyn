@@ -3,12 +3,24 @@ STOP_WORDS = [
     'i', 'in', 'is', 'it', 'its', 'of', 'on', 'that', 'the', 'to', 'were',
     'will', 'with'
 ]
-
+import string
 
 def print_word_freq(file):
     """Read in `file` and print out the frequency of words in that file."""
-    pass
+    # pass ("replace with my code")
+    with open(file) as file:
+        open_file = file.read()
+        print(type(open_file))
+    
 
+    
+
+# test_sentence = "I would love to learn to code in one day!" 
+    open_file = open_file.lower()
+    new_file= str.maketrans('', '', string.punctuation)
+
+    punctuation_removed = open_file.translate(new_file)
+    print(punctuation_removed)
 
 if __name__ == "__main__":
     import argparse
